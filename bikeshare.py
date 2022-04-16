@@ -193,6 +193,11 @@ def display_raw_data(df):
 def separator():
     print('-'*40)
 
+def filters_selection(city, month, day):
+        print('Bike Share Data:')
+        print('City: ', city.title())
+        print('Month: ', month.title())
+        print('Day: ', day.title())
 
 def main():
     while True:
@@ -202,10 +207,7 @@ def main():
 
         separator()
         print()
-        print('Bike Share Data:')
-        print('City: ', city.title())
-        print('Month: ', month.title())
-        print('Day: ', day.title())
+        filters_selection(city, month, day)
         print()
         separator()
         time_stats(df)
