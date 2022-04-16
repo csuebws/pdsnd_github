@@ -192,6 +192,7 @@ def display_raw_data(df):
 
 
 def separator():
+    """Displays line break for improved CLI output readability."""
     print('-'*40)
 
 
