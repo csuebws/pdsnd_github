@@ -194,10 +194,12 @@ def separator():
     print('-'*40)
 
 def filters_selection(city, month, day):
-        print('Bike Share Data:')
-        print('City: ', city.title())
-        print('Month: ', month.title())
-        print('Day: ', day.title())
+    print()
+    print('Bike Share Data:')
+    print('City: ', city.title())
+    print('Month: ', month.title())
+    print('Day: ', day.title())
+    print()
 
 def main():
     while True:
@@ -205,10 +207,8 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        separator()
-        print()
+        separator()        
         filters_selection(city, month, day)
-        print()
         separator()
         time_stats(df)
         separator()
