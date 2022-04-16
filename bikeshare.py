@@ -195,6 +195,13 @@ def separator():
     """Displays line break for improved CLI output readability."""
     print('-'*40)
 
+def filters_selection(city, month, day):
+    print()
+    print('Bike Share Data:')
+    print('City: ', city.title())
+    print('Month: ', month.title())
+    print('Day: ', day.title())
+    print()
 
 def main():
     while True:
@@ -202,13 +209,8 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        separator()
-        print()
-        print('Bike Share Data:')
-        print('City: ', city.title())
-        print('Month: ', month.title())
-        print('Day: ', day.title())
-        print()
+        separator()        
+        filters_selection(city, month, day)
         separator()
         time_stats(df)
         separator()
